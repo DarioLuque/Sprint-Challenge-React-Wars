@@ -1,31 +1,19 @@
 import React from 'react';
-import styled from 'styled-components';
+import { StyledCards } from './styles/StyledCards'
 
-const Card = styled.div `
-margin: 1rem 1rem 1rem 1rem;
-padding: 1rem;
-border: 1px dotted #2FF923; 
-width: 100%;
 
-p {
-	font-size: 20px;
-}
-
-&:hover {
-		background-color: #624A2e;
-		color: #2FF923;
-}
-`;
 
 function CharacterCard(props) {
         return(
-		<Card>
-				<p>name: {props.character.name}</p>
+
+			<StyledCards>
+				<h3>name: {props.character.name}</h3>
 				<p>height: {props.character.height}</p>
 				<p>mass: {props.character.mass}</p>
 				<p>gender: {props.character.gender}</p>
 				<p>hair color: {props.character.hair_color}</p>  
-		</Card>         
+			</StyledCards>
+   
         )
     }
 
